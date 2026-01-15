@@ -1,6 +1,11 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+/* @import "tailwindcss/preflight.css" layer(base); */
+@import "tailwindcss/utilities.css" layer(utilities);
 body {
     background-color: #e6e6e6;
     overflow-x: hidden;
+    font-family: inherit;
 }
 
 a {
@@ -15,8 +20,8 @@ header {
 }
 
 .allure {
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 26.5px;
+    font-family: 'Helvetica Neue', sans-serif !important;
+    font-size: 26.5px !important;
     position: relative;
     animation-name: headerPosition1;
     animation-duration: 0.25s;
@@ -169,7 +174,6 @@ header a:hover {
     letter-spacing: 20px;
     z-index: 3;
     line-height: 75px;
-
 }
 
 .newArrival h1:nth-of-type(1) {
@@ -213,6 +217,60 @@ header a:hover {
     100% {
         opacity: 1;
         top: 35%;
+    }
+}
+.section2{
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-top: 20px;
+}
+.section2::-webkit-scrollbar{
+    display: none;
+}
+.carousel{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-right: 30px;
+    animation: carousel 60s infinite linear;
+}
+.carousel2{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-right: 30px;
+    animation: carousel2 60s infinite linear;
+}
+.carouselElement{
+    font-family: 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    height: 30px;
+    padding: 5px 40px;
+    border-radius: 9999px;
+    color: white;
+    text-align: center;
+    align-items: center;
+
+}
+
+@keyframes carousel{
+    from{
+        translate: 0%;
+    }
+    to{
+        translate: -100%;
+    }
+}
+@keyframes carousel2{
+    from{
+        translate: -100%;
+    }
+    to{
+        translate: 0%;
     }
 }
 
@@ -327,3 +385,4 @@ header a:hover {
     }
 }
 }
+

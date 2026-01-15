@@ -1,0 +1,353 @@
+/*! tailwindcss v4.1.18 | MIT License | https://tailwindcss.com */
+@layer theme, base, components, utilities;
+@layer utilities {
+  .bg-\[\#0d1b2a\] {
+    background-color: #0d1b2a;
+  }
+  .bg-\[\#000000\] {
+    background-color: #000000;
+  }
+  .bg-\[\#003049\] {
+    background-color: #003049;
+  }
+}
+body {
+  background-color: #e6e6e6;
+  overflow-x: hidden;
+  font-family: inherit;
+}
+a {
+  text-decoration: none;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.allure {
+  font-family: 'Helvetica Neue', sans-serif !important;
+  font-size: 26.5px !important;
+  position: relative;
+  animation-name: headerPosition1;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes headerPosition1 {
+  0% {
+    top: -20%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 0%;
+    opacity: 1;
+  }
+}
+header div {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+header a {
+  color: #202020;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  opacity: 0;
+  transition: 0.5s;
+}
+header div a:nth-of-type(1) {
+  animation-name: headerPosition2;
+  animation-delay: 0.25s;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+}
+header div a:nth-of-type(2) {
+  animation-name: headerPosition2;
+  animation-delay: 0.35s;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+}
+header div a:nth-of-type(3) {
+  animation-name: headerPosition2;
+  animation-delay: 0.45s;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+}
+header a:nth-of-type(1) {
+  animation-name: headerPosition2;
+  animation-delay: 0.55s;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+}
+header a:hover {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+}
+@keyframes headerPosition2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.section1 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.image1 {
+  height: 520px;
+  width: 340px;
+  background-image: url("../images/image-3.png");
+  background-size: cover;
+  position: absolute;
+  top: 5%;
+  opacity: 0;
+  animation-name: position1;
+  animation-duration: 0.5s;
+  animation-delay: 0.45s;
+  animation-fill-mode: forwards;
+}
+@keyframes position1 {
+  0% {
+    top: -10%;
+    opacity: 0;
+  }
+  100% {
+    top: 5%;
+    opacity: 1;
+  }
+}
+@keyframes position2 {
+  0% {
+    top: 10%;
+    opacity: 0;
+  }
+  100% {
+    top: 15%;
+    opacity: 1;
+  }
+}
+.image2 {
+  height: 550px;
+  width: 450px;
+  background-image: url("../images/image4.png");
+  background-size: cover;
+  position: absolute;
+  left: 55%;
+  top: 15%;
+  z-index: 2;
+  animation-name: position2;
+  opacity: 0;
+  animation-duration: 0.5s;
+  animation-delay: 0.65s;
+  animation-fill-mode: forwards;
+}
+.newArrival {
+  font-size: 70px;
+  color: white;
+  font-family: 'Helvetica Neue', sans-serif;
+  letter-spacing: 20px;
+  z-index: 3;
+  line-height: 75px;
+}
+.newArrival h1:nth-of-type(1) {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  opacity: 0;
+  animation-name: position3;
+  animation-delay: 0.75s;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+.newArrival h1:nth-of-type(2) {
+  position: absolute;
+  left: 10%;
+  top: 40%;
+  opacity: 0;
+  animation-name: position4;
+  animation-delay: 0.95s;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+@keyframes position3 {
+  0% {
+    top: 20%;
+  }
+  100% {
+    opacity: 1;
+    top: 15%;
+  }
+}
+@keyframes position4 {
+  0% {
+    top: 40%;
+  }
+  100% {
+    opacity: 1;
+    top: 35%;
+  }
+}
+.section2 {
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin-top: 20px;
+}
+.section2::-webkit-scrollbar {
+  display: none;
+}
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-right: 30px;
+  animation: carousel 60s infinite linear;
+}
+.carousel2 {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-right: 30px;
+  animation: carousel2 60s infinite linear;
+}
+.carouselElement {
+  font-family: 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  height: 30px;
+  padding: 5px 40px;
+  border-radius: 9999px;
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+@keyframes carousel {
+  from {
+    translate: 0%;
+  }
+  to {
+    translate: -100%;
+  }
+}
+@keyframes carousel2 {
+  from {
+    translate: -100%;
+  }
+  to {
+    translate: 0%;
+  }
+}
+@media (max-width:430px) {
+  body {
+    overflow-x: hidden;
+  }
+  .section1 {
+    width: 100%;
+  }
+  header div a:nth-of-type(1), a:nth-of-type(3) {
+    display: none;
+  }
+  .image1 {
+    height: 400px;
+    max-width: 90vw;
+    left: 0%;
+  }
+  .image2 {
+    height: 350px;
+    max-width: 80vw;
+    left: 60%;
+    transform: translateX(-50%);
+    animation-name: position2OtherDevices;
+  }
+  .newArrival {
+    font-size: 40px;
+    letter-spacing: 0px;
+  }
+  .newArrival h1:nth-of-type(1) {
+    position: absolute;
+    left: 0;
+    top: 20%;
+    opacity: 0;
+    animation-name: position3;
+  }
+  .newArrival h1:nth-of-type(2) {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    opacity: 0;
+    animation-name: position4;
+  }
+  @keyframes position2OtherDevices {
+    0% {
+      top: 20%;
+      opacity: 0;
+    }
+    100% {
+      top: 40%;
+      opacity: 1;
+    }
+  }
+}
+@media (min-width:430px) and (max-width:1024px) {
+  body {
+    overflow-x: hidden;
+  }
+  .section1 {
+    width: 100%;
+  }
+  header div a:nth-of-type(1), a:nth-of-type(3) {
+    display: none;
+  }
+  .image1 {
+    height: 400px;
+  }
+  .image2 {
+    height: 450px;
+    max-width: 350px;
+    left: 75%;
+    transform: translateX(-50%);
+    animation-name: position2OtherDevices;
+  }
+  .newArrival {
+    font-size: 70px;
+    letter-spacing: 0px;
+  }
+  .newArrival h1:nth-of-type(1) {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    opacity: 0;
+    animation-name: position3;
+  }
+  .newArrival h1:nth-of-type(2) {
+    position: absolute;
+    left: 10%;
+    top: 40%;
+    opacity: 0;
+    animation-name: position4;
+  }
+  @keyframes position2OtherDevices {
+    0% {
+      top: 10%;
+      opacity: 0;
+    }
+    100% {
+      top: 15%;
+      opacity: 1;
+    }
+  }
+}
