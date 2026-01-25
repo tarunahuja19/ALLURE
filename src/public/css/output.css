@@ -7,8 +7,23 @@
   .bg-\[\#000000\] {
     background-color: #000000;
   }
+  .bg-\[\#006d77\] {
+    background-color: #006d77;
+  }
   .bg-\[\#003049\] {
     background-color: #003049;
+  }
+  .bg-\[\#023047\] {
+    background-color: #023047;
+  }
+  .bg-\[url\(\'\.\.\/images\/image-5\.png\'\)\] {
+    background-image: url('../images/image-5.png');
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .text-\[30px\] {
+    font-size: 30px;
   }
 }
 body {
@@ -108,7 +123,7 @@ header a:hover {
 .image1 {
   height: 520px;
   width: 340px;
-  background-image: url("../images/image-3.png");
+  background-image: url("../images/image-1.png");
   background-size: cover;
   position: absolute;
   top: 5%;
@@ -141,7 +156,7 @@ header a:hover {
 .image2 {
   height: 550px;
   width: 450px;
-  background-image: url("../images/image4.png");
+  background-image: url("../images/image-2.png");
   background-size: cover;
   position: absolute;
   left: 55%;
@@ -205,9 +220,14 @@ header a:hover {
   overflow-x: auto;
   scrollbar-width: none;
   margin-top: 20px;
+  opacity: 0;
+  transition: 1s ease;
 }
 .section2::-webkit-scrollbar {
   display: none;
+}
+.section2.section2Observe {
+  opacity: 1;
 }
 .carousel {
   display: flex;
@@ -250,6 +270,137 @@ header a:hover {
   to {
     translate: 0%;
   }
+}
+.section3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+  position: relative;
+}
+.sect3Heading {
+  font-size: 80px;
+  margin: 0 auto;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bolder;
+  opacity: 0;
+}
+.sect3Heading.sect3HeadingObserve {
+  animation-name: position5;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.25s;
+}
+@keyframes position5 {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.section3-1 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+}
+.section3-1-1Img {
+  background-image: url('../images/image-3.png');
+  background-size: cover;
+  height: 500px;
+  width: 440px;
+  border-radius: 30px;
+  position: relative;
+  bottom: 100px;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+.section3-1-1Img.section3Image1Observe {
+  opacity: 1;
+  bottom: 0;
+}
+.section3-1-1Content {
+  background-color: #c38e70;
+  height: 200px;
+  width: 400px;
+  margin-top: 20px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Helvetica Neue', sans-serif;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding: 0 20px;
+  position: relative;
+  right: 100px;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+.section3-1-1Content.section3Content1Observe {
+  right: 0;
+  opacity: 1;
+}
+.section3-1-2Content {
+  height: 230px;
+  width: 400px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Helvetica Neue', sans-serif;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding: 0 20px;
+}
+.section3-1-3Img {
+  background-image: url('../images/image-4.png');
+  background-size: cover;
+  height: 500px;
+  width: 440px;
+  border-radius: 30px;
+  margin-left: 20px;
+  position: relative;
+  top: 100px;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+.section3-1-3Img.section3Image2Observe {
+  opacity: 1;
+  top: 0;
+}
+.section3-1-3Content {
+  background-color: #bdb2ff;
+  height: 200px;
+  width: 400px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Helvetica Neue', sans-serif;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding: 0 20px;
+  position: relative;
+  left: 100px;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+.section3-1-3Content.section3Content2Observe {
+  left: 0;
+  opacity: 1;
 }
 @media (max-width:430px) {
   body {
