@@ -6,6 +6,8 @@ body {
     background-color: #e6e6e6;
     overflow-x: hidden;
     font-family: inherit;
+    padding: 0;
+    margin: 0;
 }
 
 a {
@@ -222,7 +224,7 @@ header a:hover {
 .section2{
     width: 100%;
     display: flex;
-    overflow-x: auto;
+    overflow-x: hidden;
     scrollbar-width: none;
     margin-top: 20px;
     opacity: 0;
@@ -239,6 +241,7 @@ header a:hover {
     align-items: center;
     gap: 30px;
     padding-right: 30px;
+    box-sizing: border-box;
     animation: carousel 60s infinite linear;
 }
 .carousel2{
@@ -320,7 +323,7 @@ header a:hover {
     background-image: url('../images/image-3.png');
     background-size: cover;
     height: 500px;
-    width: 440px;
+    max-width: 440px;
     border-radius: 30px;
     position: relative;
     bottom: 100px;
@@ -334,7 +337,7 @@ header a:hover {
 .section3-1-1Content{
     background-color: #c38e70;
     height: 200px;
-    width: 400px;
+    max-width: 400px;
     margin-top: 20px;
     border-radius: 30px;
     display: flex;
@@ -357,7 +360,7 @@ header a:hover {
 }
 .section3-1-2Content{
     height: 230px;
-    width: 400px;
+    max-width: 400px;
     margin-bottom: 15px;
     margin-left: 20px;
     border-radius: 30px;
@@ -375,7 +378,7 @@ header a:hover {
     background-image: url('../images/image-4.png');
     background-size: cover;
     height: 500px;
-    width: 440px;
+    max-width: 440px;
     border-radius: 30px;
     margin-left: 20px;
     position: relative;
@@ -390,7 +393,7 @@ header a:hover {
 .section3-1-3Content{
     background-color: #bdb2ff;
     height: 200px;
-    width: 400px;
+    max-width: 400px;
     margin-bottom: 20px;
     border-radius: 30px;
     margin-left: 20px;
@@ -411,6 +414,51 @@ header a:hover {
 .section3-1-3Content.section3Content2Observe{
     left: 0;
     opacity: 1;
+}
+.section4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.sect4Heading{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    opacity: 0;
+    transition: 1s;
+}
+.sect4Heading.sect4HeadingObserve{
+    opacity: 1;
+}
+.review{
+    flex-shrink: 0;
+    height: 350px;
+    width: 500px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid black;
+}
+.review:nth-of-type(1){
+    box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.3)
+}
+.review h1{
+    margin-left: 20px;
+    margin-top: 60px;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+.review p{
+    margin-top: 50px;
+    margin-left: 20px;
+    font-family: 'Helvetica Neue', sans-serif;
+    line-height: 40px;
 }
 @media(max-width:430px) {
     body{
@@ -467,6 +515,45 @@ header a:hover {
         opacity: 1;
     }
 }
+.section3-1-3Img{
+    display: none;
+}
+.section3-1-3Content{
+    display: none;
+}
+.section3-1-1Content{
+    display: none;
+}
+.section3-1-1Img{
+    display: none;
+}
+.section3-1-2Content{
+    max-width: 100%;
+    border-radius: 0;
+    margin-left: 0;
+}
+.section3-1{
+    padding-left: 0;
+}
+.sect3Heading{
+    text-align: center;
+}
+.review{
+    flex-shrink: 0;
+    height: 350px;
+    width: 400px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid black;
+}
+.sect4Heading{
+    
+    font-size: 40px;
+    
+    
+}
 }
 @media(min-width:430px) and (max-width:1024px) {
     body{
@@ -521,6 +608,12 @@ header a:hover {
         top: 15%;
         opacity: 1;
     }
+}
+.section3-1-1Img{
+    background-position: center;
+}
+.section3-1-3Img{
+    background-position: center;
 }
 }
 
